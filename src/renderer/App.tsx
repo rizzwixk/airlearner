@@ -3,7 +3,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import TitleBar from './components/TitleBar';
 import SongList from './components/SongList';
 import SongView from './components/SongView';
-import FretboardView from './components/FretboardView';
+import Settings from './components/Settings';
 import './styles/globals.css';
 
 type Theme = 'dark' | 'light';
@@ -33,7 +33,7 @@ function App() {
             <Routes>
               <Route path="/" element={<SongList />} />
               <Route path="/song/:songId" element={<SongView />} />
-              <Route path="/fretboard" element={<FretboardView />} />
+              <Route path="/settings" element={<Settings />} />
             </Routes>
           </main>
         </div>

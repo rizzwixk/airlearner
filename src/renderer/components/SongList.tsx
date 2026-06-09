@@ -59,10 +59,10 @@ const SongList: React.FC = () => {
           <p className="text-sm text-gray-400 mt-1">Learn to play popular songs on guitar</p>
         </div>
         <button
-          onClick={() => navigate('/fretboard')}
+          onClick={() => navigate('/settings')}
           className="text-sm px-3 py-1.5 glass-card-light hover:bg-white/10 rounded-lg text-gray-300 transition-all cursor-pointer"
         >
-          Fretboard Study
+          Settings
         </button>
       </div>
 

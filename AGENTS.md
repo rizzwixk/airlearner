@@ -18,10 +18,10 @@ src/
     index.ts      # Window creation, IPC handlers
     preload.ts    # Context bridge for renderer
   renderer/       # React app
-    components/   # UI components (TitleBar, SongList, SongView, FretboardView)
+    components/   # UI components (TitleBar, SongList, SongView, Settings)
     content/      # Song library (songs.ts with tab snippets)
     styles/       # CSS (globals.css)
-    App.tsx       # Root component (SongList + SongView + Fretboard routes)
+    App.tsx       # Root component (SongList + SongView + Settings routes)
     main.tsx      # React entry point
     index.html    # HTML template
 ```
@@ -86,12 +86,10 @@ npx electron .                 # Run app from dist/ (faster dev loop)
 - Notes color-coded: current = green highlight, played = dimmed filled, upcoming = dimmed
 - Fret numbers displayed on string lines (tab format)
 
-### FretboardView Component
-- Full-screen interactive fretboard (strings E-A-D-G-B-E, frets 0-12)
-- Root note & scale selector dropdowns
-- Color-coded notes: root = primary-600 filled, scale notes = faded, non-scale = dimmed
-- Hover highlighting with scale animation
-- Supports 8 scale types (Chromatic, Major, Minor, Major/Minor Pentatonic, Blues, Dorian, Mixolydian)
+### Settings Component
+- Audio input device (microphone) selector
+- Mic permission handling with device enumeration
+- Selected device persisted in localStorage
 
 ## Known Issues
 - electron-builder code signing fails (symlink permissions on Windows) — run with `npm run build:exe` which uses electron-packager instead

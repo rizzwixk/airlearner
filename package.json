@@ -10,7 +10,7 @@
     "build": "npm run build:renderer && npm run build:main",
     "build:exe": "npm run build && npx electron-packager . \"Air Learner 2.0\" --out=release --overwrite --platform=win32 --arch=x64 --electron-version=28.3.3 --no-sign",
     "electron:dev": "concurrently \"vite --config vite.config.ts\" \"wait-on http://localhost:5173 && electron .\"",
-    "electron:build:win": "npm run build && electron-builder --win --config",
+    "build:installer": "npm run build && electron-builder --win --config.extraMetadata.main=dist/main/index.js",
     "electron:build:mac": "npm run build && electron-builder --mac --config",
     "electron:build:linux": "npm run build && electron-builder --linux --config"
   },
@@ -20,6 +20,31 @@
     "react-router-dom": "^6.20.0",
     "uuid": "^9.0.0",
     "zustand": "^4.4.7"
+  },
+  "build": {
+    "appId": "com.airlearner.app",
+    "productName": "Air Learner 2.0",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": ["nsis"],
+      "sign": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Air Learner 2.0",
+      "include": "build/installer.nsh",
+      "runAfterFinish": true
+    }
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

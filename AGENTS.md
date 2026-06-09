@@ -53,10 +53,14 @@ npx electron .                 # Run app from dist/ (faster dev loop)
 
 ### Styling
 - Primary color palette: gray/slate (NOT blue)
-- Dark theme: `bg-dark-400` (#0c0c14) background
-- Glass cards: `.glass-card` and `.glass-card-light` classes
+- Dark theme: dark gray (`--dark-400: #1a1a1a`) background via CSS variables
+- Light mode: toggled via `.light` class on root element, managed by ThemeContext in App.tsx
+- Theme toggle button in TitleBar (sun/moon icon)
+- CSS variables for all themeable colors defined in `:root` and `.light` in globals.css
+- Glass cards: `.glass-card` and `.glass-card-light` classes use CSS variables for backgrounds
 - Font: system fonts (-apple-system, Segoe UI, sans-serif)
 - All interactive elements need `cursor-pointer` class
+- Use inline `style={{ borderColor: 'var(--glass-border)' }}` for border colors that need to theme
 
 ### Electron
 - Frameless window (`frame: false`)
@@ -76,10 +80,11 @@ npx electron .                 # Run app from dist/ (faster dev loop)
 - Currently 12 songs with well-known riffs
 
 ### SongView Component
-- Shows guitar tab notation alongside interactive fretboard
+- Scrolling horizontal tab sheet with playhead line
 - Step-through playback: Previous/Next/Play buttons
-- Notes color-coded: played = filled, current = green highlight, unplayed = dimmed
-- Numbers on notes show their order in the sequence
+- Notes scroll into center playhead position
+- Notes color-coded: current = green highlight, played = dimmed filled, upcoming = dimmed
+- Fret numbers displayed on string lines (tab format)
 
 ### FretboardView Component
 - Full-screen interactive fretboard (strings E-A-D-G-B-E, frets 0-12)

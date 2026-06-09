@@ -19,10 +19,14 @@ export default {
           900: '#0f172a',
         },
         dark: {
-          100: '#1e1e2e',
-          200: '#181825',
-          300: '#11111b',
-          400: '#0c0c14',
+          100: 'var(--dark-100)',
+          200: 'var(--dark-200)',
+          300: 'var(--dark-300)',
+          400: 'var(--dark-400)',
+        },
+        light: {
+          100: 'var(--light-100)',
+          200: 'var(--light-200)',
         }
       },
       fontFamily: {

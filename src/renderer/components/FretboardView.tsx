@@ -50,7 +50,8 @@ const FretboardView: React.FC = () => {
           <select
             value={selectedRoot}
             onChange={(e) => setSelectedRoot(e.target.value)}
-            className="bg-dark-200 border border-white/10 rounded px-3 py-1.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary-500 cursor-pointer"
+            className="bg-dark-200 border rounded px-3 py-1.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary-500 cursor-pointer"
+            style={{ borderColor: 'var(--glass-border)' }}
           >
             {NOTE_NAMES.map((n) => (
               <option key={n} value={n}>{n}</option>
@@ -63,7 +64,8 @@ const FretboardView: React.FC = () => {
           <select
             value={selectedScale}
             onChange={(e) => setSelectedScale(e.target.value)}
-            className="bg-dark-200 border border-white/10 rounded px-3 py-1.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary-500 cursor-pointer"
+            className="bg-dark-200 border rounded px-3 py-1.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-primary-500 cursor-pointer"
+            style={{ borderColor: 'var(--glass-border)' }}
           >
             {Object.keys(SCALES).map((s) => (
               <option key={s} value={s}>{s}</option>

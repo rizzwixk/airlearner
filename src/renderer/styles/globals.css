@@ -3,9 +3,54 @@
 @tailwind utilities;
 
 :root {
-  --bg-dark: #0c0c14;
-  --bg-darker: #11111b;
+  --dark-100: #333333;
+  --dark-200: #2a2a2a;
+  --dark-300: #222222;
+  --dark-400: #1a1a1a;
+  --light-100: transparent;
+  --light-200: transparent;
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-light-bg: rgba(255, 255, 255, 0.05);
+  --glass-light-border: rgba(255, 255, 255, 0.05);
+  --scroll-track: #222222;
+  --scroll-thumb: #475569;
+  --scroll-thumb-hover: #64748b;
+  --string-line: rgba(255, 255, 255, 0.08);
 }
+
+.light {
+  --dark-100: #e8e8e8;
+  --dark-200: #ffffff;
+  --dark-300: #dcdcdc;
+  --dark-400: #f0f0f0;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-light-bg: rgba(0, 0, 0, 0.03);
+  --glass-light-border: rgba(0, 0, 0, 0.06);
+  --scroll-track: #e0e0e0;
+  --scroll-thumb: #aaaaaa;
+  --scroll-thumb-hover: #888888;
+  --string-line: rgba(0, 0, 0, 0.1);
+}
+
+.light body {
+  color: #1f2937;
+}
+
+.light .text-white { color: #1f2937; }
+.light .text-gray-300 { color: #374151; }
+.light .text-gray-400 { color: #6b7280; }
+.light .text-gray-500 { color: #9ca3af; }
+.light .text-gray-600 { color: #9ca3af; }
+.light .text-primary-200 { color: #475569; }
+.light .hover\:bg-white\/5:hover { background-color: rgba(0,0,0,0.04); }
+.light .hover\:bg-white\/10:hover { background-color: rgba(0,0,0,0.06); }
+.light .hover\:bg-white\/20:hover { background-color: rgba(0,0,0,0.1); }
+.light .border-white\/10 { border-color: rgba(0,0,0,0.1); }
+.light .border-white\/5 { border-color: rgba(0,0,0,0.05); }
+.light select { color: #1f2937; }
+.light option { color: #1f2937; background: #ffffff; }
 
 * {
   margin: 0;
@@ -20,7 +65,7 @@ html, body, #root {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: var(--bg-dark);
+  background-color: var(--dark-400);
   color: white;
 }
 
@@ -29,16 +74,16 @@ button, a, [role="button"] {
 }
 
 .glass-card {
-  background: rgba(30, 30, 46, 0.6);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
 }
 
 .glass-card-light {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-light-bg);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-light-border);
   border-radius: 12px;
 }
 
@@ -48,14 +93,14 @@ button, a, [role="button"] {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-darker);
+  background: var(--scroll-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #475569;
+  background: var(--scroll-thumb);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: var(--scroll-thumb-hover);
 }

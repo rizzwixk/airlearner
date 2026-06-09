@@ -1,0 +1,12 @@
+node_modules/
+dist/
+release/
+.cache/
+*.log
+.env
+.DS_Store
+Thumbs.db
+
+installer/
+release/
+package-lock.json

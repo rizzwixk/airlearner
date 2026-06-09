@@ -90,7 +90,7 @@ const Settings: React.FC = () => {
 
       <div className="glass-card p-5 space-y-4">
         <h2 className="text-sm font-semibold text-white uppercase tracking-wider">About</h2>
-        <p className="text-sm text-gray-400">Air Learner v1.1</p>
+        <p className="text-sm text-gray-400">Air Learner v1.1.2</p>
         <p className="text-xs text-gray-500">Desktop guitar learning app built with Electron + React + TypeScript.</p>
       </div>
     </div>

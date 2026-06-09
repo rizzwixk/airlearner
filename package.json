@@ -1,6 +1,6 @@
 {
   "name": "airlearner-2.0",
-  "version": "2.0.0",
+  "version": "1.1.0",
   "description": "Guitar learning app with local AI recommendations",
   "main": "dist/main/index.js",
   "scripts": {

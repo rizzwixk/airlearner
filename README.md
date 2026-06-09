@@ -12,7 +12,7 @@ Desktop guitar learning app built with Electron + React + TypeScript. Learn to p
 
 ## Download
 
-[Download v2.0.0 Installer](https://github.com/rizzwixk/airlearner/releases/download/v2.0.0/Air.Learner.2.0.Setup.2.0.0.exe)
+[Download v1.1 Installer](https://github.com/rizzwixk/airlearner/releases/download/v1.1/Air.Learner.2.0.Setup.1.1.0.exe)
 
 ## Build
 
